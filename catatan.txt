@@ -1,0 +1,41 @@
+PS C:\Users\ichsa\Downloads\Dev_Menara_Masjid\menara-masjid> git status
+On branch main
+Your branch is ahead of 'origin/main' by 23 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   application/controllers/panel/Spanduk_digital.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PS C:\Users\ichsa\Downloads\Dev_Menara_Masjid\menara-masjid> git checkout -b MM-31
+Switched to a new branch 'MM-31'
+
+PS C:\Users\ichsa\Downloads\Dev_Menara_Masjid\menara-masjid> git add *
+
+PS C:\Users\ichsa\Downloads\Dev_Menara_Masjid\menara-masjid> git status
+On branch MM-31
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   application/controllers/panel/Spanduk_digital.php
+
+PS C:\Users\ichsa\Downloads\Dev_Menara_Masjid\menara-masjid> git commit -m 'Upload Tambah'
+[MM-31 0fc3849] Upload Tambah
+ 1 file changed, 31 insertions(+), 73 deletions(-)
+ 
+PS C:\Users\ichsa\Downloads\Dev_Menara_Masjid\menara-masjid> git push -u origin MM-31
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 797 bytes | 398.00 KiB/s, done.
+Total 6 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create pull request for MM-31:
+remote:   https://bitbucket.org/achmadadinugroho/menara-masjid/pull-requests/new?source=MM-31&t=1
+remote:
+To https://bitbucket.org/achmadadinugroho/menara-masjid.git
+ * [new branch]      MM-31 -> MM-31
+branch 'MM-31' set up to track 'origin/MM-31'.

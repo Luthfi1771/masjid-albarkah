@@ -1,0 +1,17 @@
+{
+  "folders": [
+	{
+		"path": "../.."
+	},
+	{
+		"path": "../../../inventory-ci4"
+	},
+	{
+		"path": "../../../inventory-web-app"
+	},
+	{
+		"path": "../../../codehub"
+	}
+],
+  "settings": {}
+}

@@ -1,0 +1,105 @@
+<div class="container my-5">
+    <div class="row">
+        <!-- Gambar Donasi -->
+        <div class="col-md-8">
+            <div class="card mb-3">
+                <img src="<?= base_url('public/assets/upload/image/thumbs/' . $donasi['gambar']) ?>" class="card-img-top" alt="<?= esc($donasi['judul_donasi']) ?>">
+            </div>
+        </div>
+
+        <!-- Info Donasi -->
+        <div class="col-md-4">
+            <h5>
+                <?php if (!empty($donasi['kategori'])): ?>
+                    <span class="badge bg-light text-dark border"><?= esc($donasi['kategori']) ?></span>
+                <?php endif; ?>
+            </h5>
+
+            <h4 class="fw-bold mt-3"><?= esc($donasi['judul_donasi']) ?></h4>
+
+            <div class="d-flex align-items-center mt-2 mb-3">
+                <img src="<?= base_url('assets/upload/image/') ?>" alt="Lembaga" width="20" class="me-2">
+                <span class="text-success fw-bold"><?= esc($donasi['lembaga']) ?></span>
+                <i class="fa fa-check-circle text-primary ms-2"></i>
+            </div>
+
+            <!-- Label Kategori -->
+            <div class="bg-success bg-opacity-10 border-start border-success border-5 rounded p-2 mb-3">
+                <strong>Penggalangan ini bagian dari <?= esc($donasi['kategori']) ?></strong>
+            </div>
+
+            <!-- Jumlah Terkumpul -->
+            <h5 class="text-success fw-bold">
+                Rp <?= number_format($donasi['jumlah_terkumpul'], 0, ',', '.') ?>
+            </h5>
+            <p class="small text-muted">
+                <i class="fa fa-users me-1"></i><?= esc($donasi['jumlah_donatur'] ?? 0) ?> Donatur
+            </p>
+
+            <?php
+            $target = $donasi['target_donasi'];
+            $terkumpul = $donasi['jumlah_terkumpul'];
+            $persen = $target > 0 ? ($terkumpul / $target) * 100 : 0;
+            ?>
+            <div class="progress mb-2" style="height: 8px;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: <?= min(100, $persen) ?>%;"></div>
+            </div>
+            <p class="small mb-3 text-muted"><?= round($persen, 2) ?>% dari target Rp <?= number_format($target, 0, ',', '.') ?></p>
+
+            <!-- Waktu -->
+            <p class="small mb-4 text-muted"><?= $donasi['sisa_hari'] ?? '-'; ?> hari lagi</p>
+
+            <!-- Tombol Donasi -->
+            <a href="<?= base_url('donasi/form/' . $donasi['slug_donasi']) ?>" class="btn btn-success w-100 mb-3">
+                DONASI SEKARANG
+            </a>
+
+            <!-- Tambahan -->
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-heart"></i> Jadikan Favorit</button>
+                <div>
+                    <span>Bagikan:</span>
+                    <a href="#" class="text-muted me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-muted"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <p class="text-muted mt-3 small">Program ini mencurigakan? <a href="#">Laporkan</a></p>
+        </div>
+    </div>
+
+    <!-- Tab Konten Donasi -->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs mb-3" id="donasiTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="detail-tab" data-bs-toggle="tab" href="#detail" role="tab">Detail</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="kabar-tab" data-bs-toggle="tab" href="#kabar" role="tab">Kabar Terbaru</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="donatur-tab" data-bs-toggle="tab" href="#donatur" role="tab">Donatur</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="affiliate-tab" data-bs-toggle="tab" href="#affiliate" role="tab">Affiliate Fundraiser</a>
+                </li>
+            </ul>
+
+            <div class="tab-content p-3 border rounded bg-light" id="donasiTabContent">
+                <div class="tab-pane fade show active" id="detail" role="tabpanel">
+                    <?= $donasi['deskripsi_lengkap'] ?>
+                </div>
+                <div class="tab-pane fade" id="kabar" role="tabpanel">
+                    <p>Belum ada kabar terbaru.</p>
+                </div>
+                <div class="tab-pane fade" id="donatur" role="tabpanel">
+                    <p>Daftar donatur belum tersedia.</p>
+                </div>
+                <div class="tab-pane fade" id="affiliate" role="tabpanel">
+                    <p>Belum ada affiliate fundraiser.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

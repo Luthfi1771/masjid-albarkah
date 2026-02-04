@@ -1,0 +1,61 @@
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Status Donasi</h2>
+            <ol>
+                <li><a href="<?= base_url() ?>">Home</a></li>
+                <li>Status Donasi</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center py-5">
+
+                        <div class="mb-4">
+                            <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
+                        </div>
+
+                        <h3 class="fw-bold">Terima kasih! Donasi Anda Berhasil</h3>
+                        <p class="text-muted">Transaksi donasi Anda telah diproses dengan sukses.</p>
+
+                        <?php
+                        $nominal = (float) ($nominal ?? 0);
+                        $nama = $nama_donatur ?? 'Donatur';
+                        ?>
+
+                        <div class="border rounded p-3 my-4 text-start bg-light">
+                            <h5 class="fw-bold mb-3">Ringkasan Donasi</h5>
+
+                            <p class="mb-1"><strong>Nama:</strong> <?= esc($nama) ?></p>
+
+                            <p class="mb-1">
+                                <strong>Nominal:</strong>
+                                Rp <?= number_format($nominal, 0, ',', '.') ?>
+                            </p>
+
+                            <?php if (!empty($order_id)) : ?>
+                                <p class="mb-1"><strong>ID Transaksi:</strong> <?= esc($order_id) ?></p>
+                            <?php endif; ?>
+
+                            <?php if (!empty($status_message)) : ?>
+                                <p class="mb-1"><strong>Status:</strong> <?= esc($status_message) ?></p>
+                            <?php endif; ?>
+                        </div>
+
+                        <a href="<?= base_url('donasi') ?>" class="btn btn-success px-4">Kembali ke Donasi</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
