@@ -1,0 +1,55 @@
+#--------------------------------------------------------------------
+# ENVIRONMENT CONFIGURATION
+#--------------------------------------------------------------------
+
+# Set ke 'development' untuk debugging saat coding, atau 'production' saat publikasi
+CI_ENVIRONMENT = development
+
+#--------------------------------------------------------------------
+# APP SETTINGS
+#--------------------------------------------------------------------
+
+# Ganti dengan URL lokal kamu (misal: http://localhost/masjid-albarkah/public/)
+app.baseURL = 'http://localhost/masjid-albarkah/'
+# app.forceGlobalSecureRequests = false
+
+# app.sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler'
+# app.sessionSavePath = null
+# app.sessionCookieName = 'ci_session'
+# app.sessionExpiration = 7200
+
+#--------------------------------------------------------------------
+# DATABASE SETTINGS
+#--------------------------------------------------------------------
+
+database.default.hostname = localhost
+database.default.database = web_masjid
+database.default.username = root
+database.default.password = 
+database.default.DBDriver = MySQLi
+database.default.DBPrefix = 
+database.default.port     = 3306
+
+#--------------------------------------------------------------------
+# CONTENT SECURITY POLICY (CSP)
+#--------------------------------------------------------------------
+
+# SECURITY WARNING: Setting ini biasanya biarkan default jika tidak dipakai
+# Separate elements with a semi-colon ;
+# CSP.scriptSrc = ''
+# CSP.styleSrc = ''
+
+#--------------------------------------------------------------------
+# MIDTRANS PAYMENT GATEWAY (OPSIONAL / CUSTOM SETUP)
+#--------------------------------------------------------------------
+
+# Masukkan key Sandbox untuk pengujian portofolio
+MIDTRANS_SERVER_KEY = SB-Mid-server-xxxxxxxxxxxx
+MIDTRANS_CLIENT_KEY = SB-Mid-client-xxxxxxxxxxxx
+MIDTRANS_IS_PRODUCTION = false
+
+#--------------------------------------------------------------------
+# LOGGER / DEBUGGER SETTINGS
+#--------------------------------------------------------------------
+
+# logger.threshold = 4
