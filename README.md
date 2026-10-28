@@ -40,10 +40,7 @@ cd masjid-albarkah
 2. Pengaturan File Environment
 Duplikasi file template environment yang tersedia untuk membuat konfigurasi .env lokal:
 
-* Pengguna Linux / Mac / Git Bash:
-cp env .env
-* Pengguna Windows Command Prompt:
-copy env .env
+* ubah env menjadi .env
 
 Buka file .env yang baru dibuat dan sesuaikan konfigurasinya:
 CI_ENVIRONMENT = development
