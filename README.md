@@ -35,8 +35,8 @@ Dokumentasi resmi website Masjid Al-Barkah yang dibangun menggunakan framework C
 **PANDUAN INSTALASI LOKAL**
 
 1. Clone Repositori
-git clone [https://github.com/username-kamu/masjid-albarkah.git](https://www.google.com/search?q=https://github.com/username-kamu/masjid-albarkah.git)
-cd masjid-albarkah
+git clone (https://github.com/Luthfi1771/webci4.git)
+cd webci4
 2. Pengaturan File Environment
 Duplikasi file template environment yang tersedia untuk membuat konfigurasi .env lokal:
 
