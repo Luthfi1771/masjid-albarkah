@@ -1,106 +1,83 @@
-# Company Profile Website Full Features with CodeIgniter 4 Framework
-Anda dapat membaca pandunan penggunaan website melalui link berikut ini https://javawebmedia.com/blog/download-source-code-website-company-profile-full-features-dengan-codeigniter-4/. Adapun demo dapat Anda akses di http://compro-ci4.javawebmedia.co.id/.
+MASJID AL-BARKAH WEB APPLICATION
 
-Semoga bermanfaat.
-Spesifikasi Teknis Source Code
-Website ini dikembangkan dengan beberapa spesifikasi:
-1. Dikembangan dengan Codeigniter 4. Pastikan teman-teman membaca Server Requirements dari CI4 ini yah.
-2. Template Admin menggunakan AdminLTE 3.1.0. Bisa diakses di https://adminlte.io/
-3. Template front end menggunakan Medicio 4.0 dari https://bootstrapmade.com/medicio-free-bootstrap-theme/.
-4. Notifikasi menggunakan Sweetalert
+Dokumentasi resmi website Masjid Al-Barkah yang dibangun menggunakan framework CodeIgniter 4. Proyek ini dilengkapi dengan antarmuka modern bergaya agensi, Role-Based Access Control (RBAC), sistem transparansi keuangan otomatis bulanan, dan integrasi gerbang pembayaran digital.
 
-# Fitur-fitur Website meliputi:
+FITUR UTAMA
 
-## HALAMAN FRONT END:
+1. Tampilan Publik (Frontend)
 
-1. Halaman Beranda/Homepage
-2. Banner slider
-3. Halaman berita dan detailnya
-4. Halaman layanan
-5. Halaman profile
-6. Halaman staff dan team
-7. Halaman galeri gambar
-8. Halaman galeri video
-9. Halaman client
-10. Halaman file download
-11. Halaman kontak
+* Desain Modern Responsif: Tataletak profesional dengan navigasi lengket (sticky header), kolase foto, spanduk teks berjalan (marquee), dan bilah kemajuan (progress bar) interaktif.
+* Jadwal Sholat Otomatis: Integrasi jadwal sholat real-time dari API Kemenag RI serta cadangan Aladhan API yang dilengkapi hitung mundur waktu azan.
+* Modul Live Streaming: Indikator status dan pemutar siaran langsung YouTube yang terintegrasi.
+* Transparansi Keuangan Bulanan: Perhitungan dan reset otomatis tampilan kas publik setiap awal bulan tanpa menghapus jejak akumulasi saldo keseluruhan.
+* Donasi Online: Portal donasi dan infaq digital terintegrasi Midtrans Payment Gateway.
+* Kabar dan Kegiatan: Modul publikasi artikel, agenda kegiatan, dan galeri dokumentasi.
 
-## HALAMAN BACK END:
-1. Login dan logout
-2. Halaman update profile dan ganti password
-3. Halaman Dashboard
-4. Halaman kelola berita dan kategorinya
-5. Halaman kelola layanan dan profil
-6. Halaman kelola staff and team
-7. Halaman kelola client
-8. Halaman kelola galeri gambar dan kategorinya
-9. Halaman kelola upload/download file dan kategorinya
-10. Halaman kelola video youtube
-11. Halaman kelola pengguna
-12. Halaman kelola konfigurasi website, logo dan icon
-13. Halaman panduan website
-14. Dan fitur lainnya
+2. Panel Administrator (RBAC)
 
-## Mengakses Halaman Website dan Login ke Admin
-1. Buka browser Anda
-2. Ketik alamat http://websitekamu.com
-3. Untuk Login ke halaman Back End, silakan buka http://websitekamu.com/login
-4. Username: javawebmedia
-5. Password: javawebmedia
-
-# CodeIgniter 4 Framework
-
-## What is CodeIgniter?
-
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
-
-This repository holds the distributable version of the framework,
-including the user guide. It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
-
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
-
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+* Keamanan Level Controller: Lapisan validasi sesi dan hak akses yang diterapkan langsung pada controller.
+* Role-Based Access Control:
+* Admin: Akses penuh ke seluruh modul sistem dan konfigurasi.
+* Bendahara: Pengelolaan buku kas keuangan dan pemantauan transaksi donasi.
+* Humas: Pengelolaan berita, artikel, dan agenda kegiatan publik.
 
 
-## Important Change with index.php
+* Real-Time Polling: Pembaruan otomatis tabel pemantauan donasi pada dashboard administrator.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+TEKNOLOGI YANG DIGUNAKAN
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+* Framework: CodeIgniter 4
+* Bahasa Pemrograman: PHP >= 8.1
+* Basis Data: MySQL / MariaDB
+* Frontend: Bootstrap 5, Custom CSS, FontAwesome
+* Integrasi: Midtrans API, API Jadwal Sholat Kemenag & Aladhan, SweetAlert2
 
-**Please** read the user guide for a better explanation of how CI4 works!
+PANDUAN INSTALASI LOKAL
 
-## Repository Management
+1. Clone Repositori
+git clone [https://github.com/username-kamu/masjid-albarkah.git](https://www.google.com/search?q=https://github.com/username-kamu/masjid-albarkah.git)
+cd masjid-albarkah
+2. Pengaturan File Environment
+Duplikasi file template environment yang tersedia untuk membuat konfigurasi .env lokal:
 
-We use Github issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+* Pengguna Linux / Mac / Git Bash:
+cp env .env
+* Pengguna Windows Command Prompt:
+copy env .env
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+Buka file .env yang baru dibuat dan sesuaikan konfigurasinya:
+CI_ENVIRONMENT = development
+app.baseURL = 'http://localhost/masjid-albarkah/'
+database.default.hostname = localhost
+database.default.database = web_masjid
+database.default.username = root
+database.default.password =
 
-## Contributing
+3. Impor Basis Data
 
-We welcome contributions from the community.
+* Buat database baru bernama db_masjid_albarkah pada server MySQL Anda.
+* Impor file skema SQL yang berada di dalam direktori database/.
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/contributing.md) section in the development repository.
+4. Jalankan Aplikasi
+Jalankan server pengembangan lokal menggunakan CLI CodeIgniter:
+php spark serve
+Buka aplikasi melalui peramban web di alamat http://localhost:8080.
 
-## Server Requirements
+PENGATURAN KOORDINAT JADWAL SHOLAT DAN ID WILAYAH
+Secara bawaan, lokasi dan ID wilayah dikonfigurasi untuk area Jakarta. Untuk menyesuaikannya dengan kota atau lokasi masjid lain, ubah parameter berikut di dalam file view beranda (app/Views/home/index.php):
 
-PHP version 7.3 or higher is required, with the following extensions installed:
+1. ID Wilayah Kemenag (MyQuran API)
+Cari variabel kemenagId di dalam blok JavaScript dan sesuaikan dengan kode wilayah resmi Kemenag:
+const kemenagId = '1304'; // Contoh: '1304' untuk Jakarta Pusat
+2. Koordinat Lintang dan Bujur (Aladhan API Fallback)
+Jika API Kemenag mengalami kendala dan sistem beralih ke Aladhan API, aplikasi menggunakan koordinat geografis. Sesuaikan nilai lat dan lng dengan lokasi masjid Anda:
+const lat = -6.2672;   // Ganti dengan titik Lintang (Latitude) lokasi Anda
+const lng = 106.7591;  // Ganti dengan titik Bujur (Longitude) lokasi Anda
+(Catatan: Koordinat ini dapat diperoleh dengan mengklik kanan titik lokasi masjid pada Google Maps).
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+STRUKTUR DIREKTORI
+app/ - Logika utama aplikasi (Controllers, Models, Views)
+public/ - Titik masuk utama publik dan aset web (CSS, JS, Gambar)
+env - File template konfigurasi environment
+.gitignore - Daftar aturan pengecualian file Git
+README.md - Dokumentasi resmi proyek
