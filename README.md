@@ -1,10 +1,10 @@
-MASJID AL-BARKAH WEB APPLICATION
+**MASJID AL-BARKAH WEB APPLICATION**
 
 Dokumentasi resmi website Masjid Al-Barkah yang dibangun menggunakan framework CodeIgniter 4. Proyek ini dilengkapi dengan antarmuka modern bergaya agensi, Role-Based Access Control (RBAC), sistem transparansi keuangan otomatis bulanan, dan integrasi gerbang pembayaran digital.
 
-FITUR UTAMA
+**FITUR UTAMA**
 
-1. Tampilan Publik (Frontend)
+**1. Tampilan Publik (Frontend)**
 
 * Desain Modern Responsif: Tataletak profesional dengan navigasi lengket (sticky header), kolase foto, spanduk teks berjalan (marquee), dan bilah kemajuan (progress bar) interaktif.
 * Jadwal Sholat Otomatis: Integrasi jadwal sholat real-time dari API Kemenag RI serta cadangan Aladhan API yang dilengkapi hitung mundur waktu azan.
@@ -13,7 +13,7 @@ FITUR UTAMA
 * Donasi Online: Portal donasi dan infaq digital terintegrasi Midtrans Payment Gateway.
 * Kabar dan Kegiatan: Modul publikasi artikel, agenda kegiatan, dan galeri dokumentasi.
 
-2. Panel Administrator (RBAC)
+**2. Panel Administrator (RBAC)**
 
 * Keamanan Level Controller: Lapisan validasi sesi dan hak akses yang diterapkan langsung pada controller.
 * Role-Based Access Control:
@@ -24,7 +24,7 @@ FITUR UTAMA
 
 * Real-Time Polling: Pembaruan otomatis tabel pemantauan donasi pada dashboard administrator.
 
-TEKNOLOGI YANG DIGUNAKAN
+**TEKNOLOGI YANG DIGUNAKAN**
 
 * Framework: CodeIgniter 4
 * Bahasa Pemrograman: PHP >= 8.1
@@ -32,7 +32,7 @@ TEKNOLOGI YANG DIGUNAKAN
 * Frontend: Bootstrap 5, Custom CSS, FontAwesome
 * Integrasi: Midtrans API, API Jadwal Sholat Kemenag & Aladhan, SweetAlert2
 
-PANDUAN INSTALASI LOKAL
+**PANDUAN INSTALASI LOKAL**
 
 1. Clone Repositori
 git clone [https://github.com/username-kamu/masjid-albarkah.git](https://www.google.com/search?q=https://github.com/username-kamu/masjid-albarkah.git)
